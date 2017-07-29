@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="pmis">
+    <wb-module deploy-name="rbac">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
-        <property name="context-root" value="pmis"/>
-        <property name="java-output-path" value="/pmis/build/classes"/>
+        <property name="java-output-path" value="/rbac/build/classes"/>
+        <property name="context-root" value="rbac"/>
     </wb-module>
 </project-modules>

@@ -15,7 +15,8 @@
 		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	
-	<context:component-scan base-package="cn.com.lanou"/>
+	
+	<context:component-scan base-package="cn.com.rbac.controller"/>
 	<!-- annotation-driven:默认创建了多个对象：RequestMappingHandlerMapping，RequestMappingHandlerAdapter
 		也就提供对json格式支持
 	 -->

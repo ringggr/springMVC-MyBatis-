@@ -13,8 +13,8 @@
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd ">
 		
-	<context:component-scan base-package="cn.com.lanou.dao"/>
-	<context:component-scan base-package="cn.com.lanou.service"/>
+	<context:component-scan base-package="cn.com.rbac.dao"/>
+	<context:component-scan base-package="cn.com.rbac.service"/>
 	<!-- 第一步：配置数据源 -->
 	<context:property-placeholder location="classpath:jdbc.properties" />
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -37,7 +37,7 @@
 		*　接口的方法名必须和映射Statement的ｉｄ一致
 	 -->
 	 <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	 <property name="basePackage" value="cn.com.lanou.dao"></property>
+	 <property name="basePackage" value="cn.com.rbac.dao"></property>
 	 <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	 </bean>
 	
@@ -72,7 +72,7 @@
 			第三个*代表所有的方法，
 			括号里面的..代码所有的参数 
 		-->
-		<aop:advisor advice-ref="txAdvice" pointcut="execution(* cn.com.lanou.service.*.*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* cn.com.rbac.service.*.*(..))"/>
 	</aop:config>
 	
 	
